@@ -22,4 +22,9 @@ for(j = 0; j < divisibleList.length; j++){
 $('.project1').append(answer);
 }
 
+function project2(){
+$('.project2').append('Answer goes here');
+}
+
 project1();
+project2();
