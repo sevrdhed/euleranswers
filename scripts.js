@@ -23,7 +23,25 @@ $('.project1').append(answer);
 }
 
 function project2(){
-$('.project2').append('Answer goes here');
+
+var total = 0;
+var fibTermOne = 1;
+var fibTermTwo = 2;
+
+while(fibTermTwo < 4000000){
+  if(fibTermTwo%2 === 0){
+    total = total + fibTermTwo;
+  }
+  console.log(fibTermTwo);
+  var storage = fibTermTwo
+  fibTermTwo = fibTermOne + fibTermTwo;
+  fibTermOne = storage;
+    console.log(" Total: " + total);
+  
+
+}
+
+  $('.project2').append(total);
 }
 
 project1();
