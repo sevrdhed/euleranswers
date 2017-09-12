@@ -2,10 +2,9 @@
 
 function project1(){
 var answer = 0;
-var target = 1000;
 var divisibleList = [];
 
-for(i = 0; i < target; i++){
+for(i = 0; i < 1000; i++){
 
 		if(i%3 === 0 || i%5 === 0){
     divisibleList.push(i);
@@ -42,6 +41,38 @@ while(fibTermTwo < 4000000){
 }
 
   $('.project2').append(total);
+}
+
+function project5(){
+
+//Needs to be refactored to optimize calculation time.
+//Re-factor could be done by reducing the list of numbers to chuck the modulus on.
+//Or by incrementing the list by a larger number (2520) each time
+var done = false;
+var check = 1;
+var j = 0;
+while(!done){
+
+for (var i = 1; i < 21; i++){
+
+ if((check % i) != 0){
+
+        j = 0;
+        break;
+				}
+      else{
+  
+        j++;
+        if(j === 19){
+          console.log(check);
+          done = true;
+        }
+
+      }
+		} check++;
+   
+}
+
 }
 
 project1();
